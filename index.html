@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEP3+ Speaking Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>🎤 MEP3+ Speaking Game</h1>
+    <p class="subtitle">Choose a topic • Listen • Speak • Score • Earn rewards</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="row gap wrap">
+        <input id="playerName" class="input" placeholder="Enter your name..." aria-label="Player name"/>
+        <select id="topicSelect" class="select" aria-label="Topic">
+          <option value="friends">Friends</option>
+          <option value="classroom">Classroom</option>
+          <option value="hobbies">Hobbies</option>
+          <option value="family">Family</option>
+        </select>
+        <button id="btnNew" class="btn primary">🔄 New Sentence</button>
+      </div>
+
+      <div class="sentence-box">
+        <div class="illustration">
+          <img id="illustrationImg" alt="Illustration" />
+        </div>
+        <textarea id="textInput" class="sentence" readonly aria-label="Target sentence"></textarea>
+      </div>
+
+      <div class="row wrap">
+        <button id="btnListen" class="btn">🔊 Listen</button>
+        <button id="btnStart" class="btn success">🎙 Start Recording</button>
+        <button id="btnStop" class="btn danger">⏹ Stop Recording</button>
+      </div>
+
+      <div id="result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>🏆 Leaderboard (<span id="lbTopic">friends</span>)</h2>
+      <table id="leaderboard" class="table">
+        <thead>
+          <tr><th>Rank</th><th>Name</th><th>Score</th><th>Reward</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Grade 3 • I Learn Smart Start–style content • Works on desktop & mobile</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
