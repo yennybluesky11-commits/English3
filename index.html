@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MEP3+ Speaking Game</title>
+  <title>MEP3 Speaking Game — Units</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="app-header">
-    <h1>🎤 MEP3+ Speaking Game</h1>
-    <p class="subtitle">Choose a topic • Listen • Speak • Score • Earn rewards</p>
+    <h1>🎤 MEP3 Speaking Game</h1>
+    <p class="subtitle">Getting Started • My Friends • Family</p>
   </header>
 
   <main class="container">
@@ -18,19 +18,27 @@
       <div class="row gap wrap">
         <input id="playerName" class="input" placeholder="Enter your name..." aria-label="Player name"/>
         <select id="topicSelect" class="select" aria-label="Topic">
-          <option value="friends">Friends</option>
-          <option value="classroom">Classroom</option>
-          <option value="hobbies">Hobbies</option>
+          <option value="getting_started">Getting Started</option>
+          <option value="my_friends">My Friends</option>
           <option value="family">Family</option>
         </select>
-        <button id="btnNew" class="btn primary">🔄 New Sentence</button>
+        <button id="btnNew" class="btn primary">🔄 New Card</button>
       </div>
 
       <div class="sentence-box">
         <div class="illustration">
           <img id="illustrationImg" alt="Illustration" />
         </div>
-        <textarea id="textInput" class="sentence" readonly aria-label="Target sentence"></textarea>
+        <div class="qa">
+          <div class="prompt">
+            <div class="label">Prompt</div>
+            <div id="promptText" class="prompt-text">—</div>
+          </div>
+          <div class="answer">
+            <div class="label">Say this</div>
+            <textarea id="targetText" class="sentence" readonly aria-label="Target sentence"></textarea>
+          </div>
+        </div>
       </div>
 
       <div class="row wrap">
@@ -43,7 +51,7 @@
     </section>
 
     <section class="card">
-      <h2>🏆 Leaderboard (<span id="lbTopic">friends</span>)</h2>
+      <h2>🏆 Leaderboard (<span id="lbTopic">Getting Started</span>)</h2>
       <table id="leaderboard" class="table">
         <thead>
           <tr><th>Rank</th><th>Name</th><th>Score</th><th>Reward</th></tr>
@@ -54,7 +62,7 @@
   </main>
 
   <footer class="app-footer">
-    <p>Grade 3 • I Learn Smart Start–style content • Works on desktop & mobile</p>
+    <p>Grade 3 • Works on desktop & mobile • Web Speech API</p>
   </footer>
 
   <script src="script.js"></script>

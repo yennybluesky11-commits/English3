@@ -1,26 +1,23 @@
 
-# MEP3+ Speaking Game (with Topics & SVG Illustrations)
+# MEP3 Speaking Game — Units
 
-Kid-friendly speaking game for Grade 3. Choose a topic (Friends, Classroom, Hobbies, Family), listen & repeat, get a score, and climb per-topic leaderboards. Works entirely in the browser (no install).
+Includes three topics with curated content:
+- **Getting Started** (classroom commands, greetings, colors, numbers, patterns)
+- **My Friends** (alphabet/spelling, countries, hobbies, polite greetings)
+- **Family** (family members, home commands, pets, questions)
 
 ## Features
-- 4 topics, 10 sentences each (classroom-friendly, Smart Start–style)
-- SVG illustrations per topic (loads fast, crisp on all screens)
-- Text-to-Speech (SpeechSynthesis) + Speech-to-Text (webkitSpeechRecognition)
-- Scoring per token (+10 / -5) with visual highlights
+- SVG illustrations per card
+- Text-to-Speech (browser SpeechSynthesis)
+- Speech-to-Text (webkitSpeechRecognition / Chrome)
+- Token scoring (+10 / -5) with highlights
 - Per-topic leaderboard (localStorage)
-- Responsive, Poppins font
+- Responsive UI, Poppins font
+- Works offline (no server); open `index.html`
 
-## How to run
-1. Open `index.html` in **Google Chrome** (recommended).
-2. Select a **Topic** → click **New Sentence**.
-3. **Listen** → **Start Recording** → **Stop Recording**.
-4. Allow microphone permission.
+## How to deploy (GitHub Pages)
+1. Create a repo and upload all files.
+2. Settings → Pages → *Deploy from a branch*, `main`/root.
+3. Visit `https://<username>.github.io/<repo>/`.
 
-## Deploy to GitHub Pages
-1. Create a GitHub repo (e.g., `mep3-speaking-game-plus`).
-2. Upload all files to the repo root.
-3. Settings → Pages → Source: *Deploy from a branch*, Branch: `main` / root.
-4. Your site will be served at: `https://<your-username>.github.io/mep3-speaking-game-plus/`
-
-> Tip: Some mobile browsers require HTTPS for mic access. GitHub Pages provides HTTPS by default.
+> Tip: Microphone access usually needs HTTPS on mobile. GitHub Pages provides HTTPS.
